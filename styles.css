@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  line-height: 2;
+  background: #f4f4f4;
+  text-align: center;
+  font-size: 18px;
+  margin: 0;
+}
+
+.header {
+    background: #000;
+    padding: 18px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    font-size: 18px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.brand a {
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+}
+
+.nav-list a {
+    margin: 0 1em;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: orange;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.social-links a {
+    margin: 0 10px;
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+}
+
+.email-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+.section {
+  padding: 5em 2em;
+  margin-top: 3em; /* Adjusted to account for the header height */
+}
+
+.home-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  filter: brightness(30%);
+  z-index: -1;
+}
+
+.intro {
+  z-index: 1;
+}
+
+.intro h1 {
+  font-size: 3em;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.profile-img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-right: 2em;
+}
+
+.profile-info {
+  text-align: left;
+}
+
+.profile-info h1, .profile-info p {
+  margin: 0.5em 0;
+  font-size: 1.5em;
+}
+
+.about-section, .skills-section, .projects-section, .contact-section {
+  background: #fff;
+  padding: 2em 0;
+}
+
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+
+.project-item {
+  background: #fff;
+  padding: 1em;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 30%;
+  text-align: center;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 2em;
+}
+
+.project-item h3 {
+  margin-bottom: 0.5em;
+}
+
+.project-item p {
+  margin-bottom: 1em; /* 간격 추가 */
+}
+
+.project-item:hover {
+  transform: scale(1.05);
+}
+
+.project-item .button {
+  display: inline-block;
+  margin: 0.5em;
+  padding: 0.5em 1em;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.project-item .button:hover {
+  background: orange;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 1em 0;
+  text-align: center;
+}
+
+.transparent-navbar {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.black-text {
+    color: #000 !important;
+}
+
+/* Scroll to top button */
+#scroll-to-top {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  display: none;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 1em;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#scroll-to-top.show {
+  display: block;
+}

@@ -1,11 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>하유경의 포트폴리오</title>
+  <title>포트폴리오</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  
+  <header class="header">
+      <nav class="navbar">
+          <div class="brand">
+              <a href="#home">YK's Portfolio</a>
+          </div>
+          <ul class="nav-list">
+              <li><a href="#home" class="nav-item">Home</a></li>
+              <li><a href="#about" class="nav-item">About Me</a></li>
+              <li><a href="#skills" class="nav-item">Skills</a></li>
+              <li><a href="#projects" class="nav-item">Projects</a></li>
+          </ul>
+      </nav>
+  </header>
+  <button id="scroll-to-top">맨 위로</button>
+  <section id="home" class="section home-section">
+      <div class="intro">
+          <h1 id="typing-text"></h1>
+      </div>
+      <img src="img/img1.jpeg" alt="Main Image" class="main-image">
+  </section>
+  <section id="about" class="section about-section">
+    <h2>About Me</h2>
+    <p>이름 : 하유경</p>
+    <p>생년월일 : 1997년 6월 9일</p>
+    
+    <div class="social-links">
+        <a href="mailto:hayu6944@gmail.com"><img src="img/gmail_icon.png" alt="Email Icon" class="email-icon"></a></p>
+        <a href="https://github.com/devvhhyk" target="_blank">
+            <img src="img/git_icon.png" alt="GitHub">
+        </a>
+        <a href="https://velog.io/@hayu6944/posts" target="_blank">
+            <img src="img/velog_icon.png" alt="Vlog">
+        </a>
+    </div>
+    <br>
+    <p>안녕하세요, 백엔드 개발자 하유경입니다.<br>
+        언제나 배우고 경험하며 제가 만든 서비스를 사용하는 모든 사람들의 편의를 위해 노력하겠습니다.</p>
+  </section>
+  <section id="skills" class="section skills-section">
+      <h2>Skills</h2>
+      <p>Frontend : HTML, CSS, JavaScript, jQuery, React</p>
+      <p>Backend : Java, Spring, Spring Boot</p>
+      <p>Database : MySQL, Oracle</p>
+      <p>Tool : Visual Studio Code, Visual Studio, eclipese, intelliJ</p>
+  </section>
+  <section id="projects" class="section projects-section">
+      <h2>Projects</h2>
+      <div class="project-list">
+          <div class="project-item">
+              <h3>여행 웹사이트 Travler</h3>
+              <p>사용자 맞춤형 여행 계획을 제공하는 웹사이트 개발 프로젝트. 웹 기반 인터페이스를 통해 여행지 추천과 일정 관리 기능을 제공합니다.</p>
+              <a class="button" href="https://github.com/leeuihyoun/traveler">Github</a>
+              <a class="button" href="/웹개발 프로젝트.pdf">ppt</a>
+          </div>
+          <div class="project-item">
+              <h3>PC방 POS 시스템</h3>
+              <p>PC방 관리 및 결제 처리를 위한 POS 시스템 개발. 효율적인 관리와 빠른 서비스를 위해 사용자 인터페이스 및 데이터베이스 관리 시스템을 구축했습니다.</p>
+              <a class="button" href="https://github.com/ghtjr410/PosSystem">Github</a>
+              <a class="button" href="#">Execute</a>
+          </div>
+          <div class="project-item">
+            <h3>포트폴리오 웹사이트</h3>
+            <p>자신의 기술과 프로젝트를 소개하는 포트폴리오 웹사이트 개발 프로젝트. 사용자 친화적인 인터페이스와 반응형 디자인을 적용하였습니다.</p>
+            <a class="button" href="https://github.com/devvhhyk/portfolio.git">Github</a>
+            <a class="button" href="https://devvhhyk.github.io/portfolio/">Execute</a>
+        </div>
+          <div class="project-item">
+              <h3>크롬 확장 앱 모멘텀</h3>
+              <p>크롬 브라우저 사용자를 위한 일일 계획 및 목표 관리 확장 프로그램 개발. 사용자 친화적인 인터페이스와 매일의 목표를 시각적으로 표현합니다.</p>
+              <a class="button" href="https://github.com/devvhhyk/momentum-clone.git">Github</a>
+              <a class="button" href="https://chrome-momentumapp-clone.netlify.app/">Execute</a>
+          </div>
+          <div class="project-item">
+              <h3>영타연습 웹사이트</h3>
+              <p>사용자의 타이핑 속도와 정확성을 향상시키기 위한 웹 기반 플랫폼. 다양한 난이도의 연습 모드와 실시간 피드백 기능을 제공합니다.</p>
+              <a class="button" href="https://github.com/devvhhyk/typing-game.git">Github</a>
+              <a class="button" href="https://happy-typing-game.netlify.app/">Execute</a>
+          </div>
+          
+          
+      </div>
+  </section>
+  <footer class="footer">
+    <p>&copy; 2024 Yu Kyeong. All rights reserved.</p>
+  </footer>
 </body>
 </html>
