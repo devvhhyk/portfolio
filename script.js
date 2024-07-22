@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener('DOMContentLoaded', function() {
     const text = "하유경의 포트폴리오 입니다";
     let index = 0;
@@ -51,15 +50,20 @@ document.addEventListener('DOMContentLoaded', function() {
         const brand = document.querySelector('.brand a');
         if (window.scrollY > 100) { // Adjust this value based on when you want the color to change
             header.classList.add('transparent-navbar');
-            navLinks.forEach(link => link.classList.add('black-text'));
+            navLinks.forEach(link => {
+                link.classList.add('black-text');
+                link.classList.add('black-hover');
+            });
             brand.classList.add('black-text');
         } else {
             header.classList.remove('transparent-navbar');
-            navLinks.forEach(link => link.classList.remove('black-text'));
+            navLinks.forEach(link => {
+                link.classList.remove('black-text');
+                link.classList.remove('black-hover');
+            });
             brand.classList.remove('black-text');
         }
     });
   
     type();
-  });
-  
+});
