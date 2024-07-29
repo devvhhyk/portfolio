@@ -3,34 +3,47 @@ document.addEventListener('DOMContentLoaded', function() {
     let index = 0;
     const typingText = document.getElementById('typing-text');
     const navLinks = document.querySelectorAll('.nav-list a');
-  
+
     function type() {
         if (index < text.length) {
             typingText.textContent += text.charAt(index);
             index++;
-            setTimeout(type, 150); // Adjust the speed of typing here.
+            setTimeout(type, 200);
+        } else {
+            setTimeout(deleteText, 2500);
         }
     }
+
+    function deleteText(){
+        if(index >= 0){
+            typingText.textContent = text.substring(0, index);
+            index--;
+            setTimeout(deleteText, 100);
+        } else {
+            setTimeout(type, 1000);
+        }
+    }
+
+    type(); // 타이핑 시작
   
     function scrollToSection(event) {
-      event.preventDefault();
-      const targetId = event.currentTarget.getAttribute("href");
-      const targetElement = document.querySelector(targetId);
-      const headerOffset = document.querySelector('.header').offsetHeight;
-      const elementPosition = targetElement.offsetTop;
-      const offsetPosition = elementPosition - headerOffset;
-  
-      window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth"
-      });
+        event.preventDefault();
+        const targetId = event.currentTarget.getAttribute("href");
+        const targetElement = document.querySelector(targetId);
+        const headerOffset = document.querySelector('.header').offsetHeight;
+        const elementPosition = targetElement.offsetTop;
+        const offsetPosition = elementPosition - headerOffset;
+    
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+        });
     }
   
     navLinks.forEach(link => {
-      link.addEventListener('click', scrollToSection);
+        link.addEventListener('click', scrollToSection);
     });
   
-    // Scroll to top button
     const scrollToTopButton = document.getElementById('scroll-to-top');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 300) {
@@ -48,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const header = document.querySelector('.header');
         const navLinks = document.querySelectorAll('.nav-list a');
         const brand = document.querySelector('.brand a');
-        if (window.scrollY > 100) { // Adjust this value based on when you want the color to change
+        if (window.scrollY > 100) {
             header.classList.add('transparent-navbar');
             navLinks.forEach(link => {
                 link.classList.add('black-text');
@@ -64,6 +77,4 @@ document.addEventListener('DOMContentLoaded', function() {
             brand.classList.remove('black-text');
         }
     });
-  
-    type();
 });
