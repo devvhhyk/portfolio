@@ -1,0 +1,400 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  line-height: 1.5;
+  background: #f4f4f4;
+  text-align: center;
+  font-size: 16px;
+  margin: 0;
+}
+
+.header {
+  background: #000;
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  font-size: 16px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.brand a {
+  color: white;
+  font-size: 1.6em;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding: 30px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding-right: 30px;
+}
+
+.nav-list a {
+  margin: 0 1em;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+  color: orange;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.social-links a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+}
+
+.social-links a img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-links a img:hover{
+  transform: scale(1.2);
+}
+
+.social-links a::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.social-links a:hover::after {
+  opacity: 1;
+}
+
+.email-icon {
+  vertical-align: middle;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.section {
+  padding: 5em 2em;
+  margin-top: 3em;
+}
+
+.home-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  filter: brightness(30%);
+  z-index: -1;
+}
+
+.intro {
+  z-index: 1;
+}
+
+.intro h1 {
+  font-size: 3.5em;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+.title-box {
+  margin-bottom: 2em;
+  padding: 10px;
+  border: 2px solid #ddd;
+  display: inline-block;
+  background: #fff;
+}
+
+.about-section {
+  text-align: center;
+  border-top:3px solid #ddd;
+  border-bottom: 3px solid #ddd;
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.about-me {
+  flex: 1 1 66%;
+  text-align: center;
+}
+
+.about-me p {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.skills-section {
+  padding: 20px;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.skill-category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.skill-category h3 {
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.skill-category ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.skill-category ul li img {
+  width: 50px;
+  height: 50px;
+}
+
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top:3px solid #ddd;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+
+.project-item {
+  background: #fff;
+  padding: 1em;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 45%;
+  text-align: center;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 2em;
+}
+
+.project-item h3 {
+  margin-bottom: 0.5em;
+}
+
+.project-item p {
+  margin-bottom: 1em;
+}
+
+.project-item:hover {
+  transform: scale(1.05);
+}
+
+.project-item .button {
+  display: inline-block;
+  margin: 0.5em;
+  padding: 0.5em 1em;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.project-item .button:hover {
+  background: orange;
+}
+
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 1em 0;
+  text-align: center;
+}
+
+.transparent-navbar {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.black-text {
+    color: #000 !important;
+}
+
+#scroll-to-top {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  display: none;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 1em;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#scroll-to-top.show {
+  display: block;
+}
+
+.nav-list a.black-hover:hover {
+  color: orange !important;
+}
+
+.arrow-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.arrow {
+  width: 24px;
+  height: 24px;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(45deg);
+  margin: 5px;
+  animation: bounce 2s infinite;
+}
+
+.arrow:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.arrow:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.name-year {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.border-text {
+  position: relative;
+  padding: 30px;
+  max-width: 750px;
+  margin: 20px auto;
+  box-shadow: 3px 3px 6px rgba(0.1, 0.1, 0.1, 0.2);
+  border-radius: 15px;
+}
+
+.border-text p {
+  margin: 0;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #333;
+}
+
+.project-item img {
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.button {
+  display: inline-block;
+  margin: 0.5em;
+  padding: 0.5em 1em;
+  background: black;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: orange;
+}
