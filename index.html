@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>포트폴리오</title>
+  <title>하유경's 포트폴리오</title>
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
+
 <body>
   <header class="header">
     <nav class="navbar">
@@ -15,123 +16,219 @@
       </div>
       <ul class="nav-list">
         <li><a href="#home" class="nav-item">Home</a></li>
-        <li><a href="#about" class="nav-item">About Me</a></li>
+        <li><a href="#about" class="nav-item">AboutMe</a></li>
         <li><a href="#skills" class="nav-item">Skills</a></li>
         <li><a href="#projects" class="nav-item">Projects</a></li>
+        <li><a href="#contact" class="nav-item">Contact</a></li>
       </ul>
     </nav>
   </header>
-  <button id="scroll-to-top">맨 위로</button>
+  <button id="scroll-to-top">맨위로</button>
+
   <section id="home" class="section home-section">
     <div class="intro">
       <h1 id="typing-text"></h1>
     </div>
     <img src="img/img1.jpeg" alt="Main Image" class="main-image">
   </section>
+
   <section id="about" class="section about-section">
+    <h2>ABOUT ME</h2>
     <div class="about-container">
-      <div class="about-me">
-        <p class="name-year">하유경 (97.06.09)</p>
-        <div class="border-text">
-        <p>안녕하세요 신입 백엔드 개발자 하유경입니다.<br>
-          저는 스프링부트와 자바스크립트를 사용하여 개발하는 것을 좋아합니다.
-          <br>
-          <br>
-          또한 개발자로서 컴퓨터에 대해 더 배우기 위해<br>
-          24년 3월부터 한국방송통신대학교 컴퓨터과학과에서 공부하고 있으며<br>
-          앞으로도 더 많은 배움과 경험으로 큰 성장을 이루는 사람이 되겠습니다.</p>
+      <div class="about-item">
+        <h3>이름</h3>
+        <p>하유경</p>
+      </div>
+      <div class="about-item">
+        <h3>생년월일</h3>
+        <p>1997.06.09</p>
+      </div>
+      <div class="about-item">
+        <h3>연락처</h3>
+        <p>010-6769-6944</p>
+      </div>
+      <div class="about-item">
+
+        <h3>이메일</h3>
+        <p>hayu6944@gmail.com</p>
+      </div>
+      <div class="about-item">
+
+        <h3>주소지</h3>
+        <p>경기도 시흥시</p>
+      </div>
+      <div class="about-item">
+
+        <h3>학력</h3>
+        <p>한국방송통신대학교 (컴퓨터과학과) 재학중</p>
+      </div>
+    </div>
+  </section>
+  
+  <section id="skills" class="section skills-section">
+    <h2>SKILLS</h2>
+    <div class="skills-container">
+      <div class="skill-item">
+        <h3>Frontend</h3>
+        <div class="skill-icons">
+          <div class="icon-container">
+            <img src="img/html_icon.png" alt="HTML">
+            <p>HTML</p>
+          </div>
+          <div class="icon-container">
+            <img src="img/css_icon.png" alt="CSS">
+            <p>CSS</p>
+          </div>
+          <div class="icon-container">
+            <img src="img/js_icon.png" alt="JavaScript">
+            <p>JavaScript</p>
+          </div>
+          <div class="icon-container">
+            <img src="img/jquery_icon.png" alt="jQuery">
+            <p>jQuery</p>
+          </div>
+          <div class="icon-container">
+            <img src="img/react_icon.png" alt="React">
+            <p>React</p>
+          </div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <h3>Backend</h3>
+        <div class="skill-icons">
+          <div class="icon-container">
+            <img src="img/java_icon.png" alt="Java">
+            <p>Java</p>
+          </div>
+          <div class="icon-container">
+            <img src="img/spring_icon.png" alt="Spring">
+            <p>Spring</p>
+          </div>
+          <div class="icon-container">
+            <img src="https://godekdls.github.io/images/springboot/logo.png" alt="Spring Boot">
+            <p>Spring Boot</p>
+          </div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <h3>Database</h3>
+        <div class="skill-icons">
+          <div class="icon-container">
+            <img src="img/mysql_icon.png" alt="MySQL">
+            <p>MySQL</p>
+          </div>
+          <div class="icon-container">
+            <img src="https://blog.kakaocdn.net/dn/baoi3W/btqZ4zpN2ZS/A6Hp814asNaB6byR2LFHik/img.png" alt="Oracle">
+            <p>Oracle</p>
+          </div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <h3>Tool</h3>
+        <div class="skill-icons">
+          <div class="icon-container">
+            <img src="https://seeklogo.com/images/V/visual-studio-code-logo-449D71944F-seeklogo.com.png" alt="Visual Studio Code">
+            <p>VS Code</p>
+          </div>
+          <div class="icon-container">
+            <img src="img/vs_icon.png" alt="Visual Studio">
+            <p>Visual Studio</p>
+          </div>
+          <div class="icon-container">
+            <img src="img/eclipse_icon.png" alt="Eclipse">
+            <p>Eclipse</p>
+          </div>
+          <div class="icon-container">
+            <img src="img/intellij_icon.png" alt="IntelliJ">
+            <p>IntelliJ</p>
+          </div>
         </div>
       </div>
     </div>
+  </section>
+  
+  <section id="projects" class="section projects-section">
+    <h2>PROJECTS</h2>
+    <div class="projects-container">
+      <div class="project-item-large">
+        <div class="project-image">
+          <img src="img/travler.png" alt="Travler">
+        </div>
+        <div class="project-content">
+          <h3>여행 웹사이트 Travler (4인 팀프로젝트)</h3>
+          <p><strong>설명:</strong> 여행 웹사이트로 항공, 호텔, 티켓, 패키지여행을 예약할 수 있으며<br>
+            주문내역을 확인하고 다이어리 캘린더에서 일정을 확인할 수 있습니다</p>
+          <p><strong>구현한 기능:</strong> 유효성 검사, 호텔검색, 호텔상세보기, 숙소 모달, 로그인시에만 결제,<br>
+            결제 처리, 호텔 등록, 숙소 등록</p>
+          <p><strong>Frontend:</strong> HTML, CSS, JavaScript</p>
+          <p><strong>Backend:</strong> Java, Thymeleaf, Mybatis, SpringBoot</p>
+          <p><strong>Database:</strong> MySQL</p>
+          <p><strong>Development environment:</strong> IntelliJ</p>
+          <div class="project-links">
+            <a href="https://github.com/leeuihyoun/traveler" target="_blank" class="button">깃허브로 이동</a>
+            <a href="pdf/웹개발 프로젝트.pdf" target="_blank" class="button">PPT로 이동</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-item-large">
+        <div class="project-image">
+          <img src="img/portfolio.png" alt="Portfolio">
+        </div>
+        <div class="project-content">
+          <h3>YK's Portfolio</h3>
+          <p><strong>설명:</strong> github.io로 배포하여 만든 포트폴리오 웹사이트로<br>
+            메인화면, 소개, 기술스택, 프로젝트, 깃허브와 블로그들을 확인할 수 있습니다</p>
+          <p><strong>Frontend:</strong> HTML, CSS, JavaScript</p>
+          <div class="project-links">
+            <a href="https://github.com/devvhhyk/portfolio" target="_blank" class="button">깃허브로 이동</a>
+            <a href="https://devvhhyk.github.io/portfolio" target="_blank" class="button">실행해보기</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-item-large">
+        <div class="project-image">
+          <img src="img/momen.png" alt="Momentum">
+        </div>
+        <div class="project-content">
+          <h3>크롬 확장 앱 모멘텀</h3>
+          <p><strong>설명:</strong> 모멘텀 웹은 사용자의 위치를 기반으로 날씨 정보를 제공하며, 개인의 이름을 세션에 저장합니다. 투두리스트 기능을 통해 할 일을 관리할 수 있으며, 명언과 배경화면을 새로 고침으로써 변경할 수 있습니다</p>
+          <p><strong>주요 기능:</strong> 세션 관리, 시계, 투두리스트, 날씨 API 사용, 명언, 배경화면</p>
+          <p><strong>Frontend:</strong> HTML, CSS, JavaScript</p>
+          <div class="project-links">
+            <a href="https://github.com/devvhhyk/momentum-clone.git" target="_blank" class="button">깃허브로 이동</a>
+            <a href="https://chrome-momentumapp-clone.netlify.app/" target="_blank" class="button">실행해보기</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-item-large">
+        <div class="project-image">
+          <img src="img/typing_game.png" alt="Typing Game">
+        </div>
+        <div class="project-content">
+          <h3>영타연습 웹사이트</h3>
+          <p><strong>설명:</strong> 제한시간 안에 타자를 치는 게임형식으로 영타연습을 할 수 있습니다 </p>
+          <p><strong>주요 기능:</strong> 단어 랜덤 출력, 대소문자 구분 없음, 일치 체크, 점수 계산, 시간 제한, 리셋 기능</p>
+          <p><strong>Frontend:</strong> HTML, CSS, JavaScript</p>
+          <div class="project-links">
+            <a href="https://github.com/devvhhyk/typing-game.git" target="_blank" class="button">깃허브로 이동</a>
+            <a href="https://happy-typing-game.netlify.app/" target="_blank" class="button">실행해보기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <section id="contact" class="section contact-section">
+    <h2>CONTACT</h2>
     <div class="social-links">
-      <a href="mailto:hayu6944@gmail.com" data-tooltip="이메일 보내기"><img src="img/gmail_icon.png" alt="Email Icon" class="email-icon"></a>
       <a href="https://github.com/devvhhyk" target="_blank" data-tooltip="깃허브로 이동"><img src="img/git_icon.png" alt="GitHub"></a>
       <a href="https://velog.io/@hayu6944/posts" target="_blank" data-tooltip="벨로그로 이동"><img src="img/velog_icon.png" alt="Velog"></a>
       <a href="https://blog.naver.com/hn2cresent" target="_blank" data-tooltip="블로그로 이동"><img src="https://i.namu.wiki/i/QWVJJqQ2U_KE1A1BkDI5WwhFcIeQ4C9uGIgibUWPHr3ev65fv4JW9_Yd-66EVu_0TF8mMXIh9k_dnrv_DlLBCw.svg" alt="blog"></a>
-    </div>
-  </section>
-  <section id="skills" class="section skills-section">
-    <div class="skill-set">
-      <div class="skill-category">
-        <h3>Frontend</h3>
-        <ul>
-          <li><img src="img/html_icon.png" alt="HTML"></li>
-          <li><img src="img/css_icon.png" alt="CSS"></li>
-          <li><img src="img/js_icon.png" alt="JavaScript"></li>
-          <li><img src="img/jquery_icon.png" alt="jQuery"></li>
-          <li><img src="img/react_icon.png" alt="React"></li>
-        </ul>
-      </div>
-      <div class="skill-category">
-        <h3>Backend</h3>
-        <ul>
-          <li><img src="img/java_icon.png" alt="Java"></li>
-          <li><img src="img/spring_icon.png" alt="Spring"></li>
-          <li><img src="img/springboot_icon.png" alt="Spring Boot"></li>
-        </ul>
-      </div>
-      <div class="skill-category">
-        <h3>Database</h3>
-        <ul>
-          <li><img src="img/mysql_icon.png" alt="MySQL"></li>
-          <li><img src="img/oracle_icon.png" alt="Oracle"></li>
-        </ul>
-      </div>
-      <div class="skill-category">
-        <h3>Tool</h3>
-        <ul>
-          <li><img src="img/vscode_icon.png" alt="Visual Studio Code"></li>
-          <li><img src="img/vs_icon.png" alt="Visual Studio"></li>
-          <li><img src="img/eclipse_icon.png" alt="Eclipse"></li>
-          <li><img src="img/intellij_icon.png" alt="IntelliJ"></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects" class="section projects-section">
-    <div class="project-list">
-      <div class="project-item">
-        <img src="img/todonboard.png">
-        <h3>개인 일정 관리 & 게시판 (진행중..)</h3>
-        <p>기술 스택: SpringBoot, MySQL, HTML, CSS, JavaScript</p>
-        <p>기능 : 회원가입/로그인 기능, 투두리스트, 날씨api,<br>
-          게시판, 댓글기능, 좋아요기능</p>
-        <a href="#" target="_blank" class="button">Github</a>
-        <a href="#" target="_blank" class="button">실행</a>
-      </div>
-
-      <div class="project-item">
-        <img src="img/travler.png">
-        <h3>여행 웹사이트 Travler (팀프로젝트)</h3>
-        <p>기술 스택: SpringBoot, MySQL, HTML, CSS, JavaScript</p>
-        <p>구현한 기능 : 유효성 검사, 호텔검색기능, 호텔상세보기,<br>
-          호텔시설로 매핑해 맞춤숙소보여줌, 숙소 모달창,<br>
-          결제완료되면 다른 테이블로 필요로 하는 데이터들을 넘겨줌,<br>
-          비즈니스ID로 로그인 시 호텔등록가능 + 원하는 호텔을 선택해서 숙소 등록 가능</p>
-        <a href="https://github.com/leeuihyoun/traveler" target="_blank" class="button">Github</a>
-        <a href="pdf/웹개발 프로젝트.pdf" target="_blank" class="button">PPT</a>
-      </div>
-
-      <div class="project-item">
-        <img src="img/momen.png">
-        <h3>크롬 확장 앱 모멘텀</h3>
-        <p>기술 스택: HTML, CSS, JavaScript</p>
-        <p>기능 : 로그인 폼 구현, 세션저장, 24시 시계 구현,<br>
-          투두리스트 구현, 날씨api, 명언변경, 배경화면변경</p>
-        <a href="https://github.com/devvhhyk/momentum-clone.git" target="_blank" class="button">Github</a>
-        <a href="https://chrome-momentumapp-clone.netlify.app/" target="_blank" class="button">실행</a>
-      </div>
-
-      <div class="project-item">
-        <img src="img/typing_game.png">
-        <h3>영타연습 웹사이트</h3>
-        <p>기술 스택: HTML, CSS, JavaScript</p>
-        <p>기능 : 단어 랜덤으로 보여주기, 대소문자구분없이 입력,<br>
-          단어 일치 체크, 점수 올리기, 시간제한, 리셋</p>
-        <a href="https://github.com/devvhhyk/typing-game.git" target="_blank" class="button">Github</a>
-        <a href="https://happy-typing-game.netlify.app/" target="_blank" class="button">실행</a>
-      </div>
     </div>
   </section>
 
