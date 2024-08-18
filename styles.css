@@ -266,7 +266,7 @@ html {
 
 .project-image {
   flex: 1;
-  max-width: 45%; /* 이미지 크기를 더 크게 설정 */
+  max-width: 45%;
 }
 
 .project-image img {
