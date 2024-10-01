@@ -154,12 +154,12 @@ html {
 }
 
 .about-item h3 {
-  font-size: 1.2em;
+  font-size: 1.4em;
   margin-bottom: 0.5em;
 }
 
 .about-item p {
-  font-size: 1em;
+  font-size: 1.09em;
   color: #333;
 }
 
@@ -180,7 +180,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5em;
+  gap: 1.1em;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -243,13 +243,15 @@ html {
 
 .projects-container {
   display: flex;
-  flex-direction: column;
-  gap: 2em;
-  max-width: 1000px; /* 최대 너비를 더 넓게 설정 */
-  margin: 0 auto;
+  overflow-x: auto; /* 가로 스크롤을 활성화 */
+  gap: 1.5em;
+  max-width: 100%;
+  padding: 1em;
+  scroll-snap-type: x mandatory; /* 스크롤 스냅 적용 */
 }
 
 .project-item-large {
+  flex: 0 0 48%; /* 프로젝트 항목의 너비 */
   display: flex;
   background: #fff;
   border-radius: 10px;
@@ -257,16 +259,12 @@ html {
   overflow: hidden;
   align-items: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-item-large:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  scroll-snap-align: center; /* 스크롤 스냅 중앙 정렬 */
 }
 
 .project-image {
   flex: 1;
-  max-width: 45%;
+  max-width: 50%; /* 이미지 크기 */
 }
 
 .project-image img {
@@ -275,7 +273,7 @@ html {
 }
 
 .project-content {
-  flex: 2;
+  flex: 1;
   padding: 1.5em;
   text-align: left;
 }
