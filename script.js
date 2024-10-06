@@ -78,3 +78,38 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const projectItems = document.querySelectorAll(".project-item-large");
+    const leftArrow = document.querySelector(".left-arrow");
+    const rightArrow = document.querySelector(".right-arrow");
+    
+    let currentIndex = 0;
+    const totalProjects = projectItems.length;
+
+    // 모든 프로젝트를 숨기고 인덱스에 해당하는 프로젝트만 보이게
+    function updateSlide() {
+        projectItems.forEach((item, index) => {
+            item.style.display = index === currentIndex ? "flex" : "none"; // 현재 인덱스의 프로젝트만 보이게
+        });
+
+        leftArrow.style.display = currentIndex === 0 ? "none" : "block";
+        rightArrow.style.display = currentIndex === totalProjects - 1 ? "none" : "block";
+    }
+
+    rightArrow.addEventListener("click", () => {
+        if (currentIndex < totalProjects - 1) {
+            currentIndex++;
+            updateSlide();
+        }
+    });
+
+    leftArrow.addEventListener("click", () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateSlide();
+        }
+    });
+
+    updateSlide();
+});

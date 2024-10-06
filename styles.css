@@ -233,6 +233,7 @@ html {
 .projects-section {
   padding: 2em 0;
   text-align: center;
+  background-color: #fff;
 }
 
 .projects-section h2 {
@@ -241,41 +242,79 @@ html {
   color: #333;
 }
 
+.slider-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2em;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 0.5em;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
 .projects-container {
   display: flex;
-  overflow-x: auto; /* 가로 스크롤을 활성화 */
-  gap: 1.5em;
-  max-width: 100%;
-  padding: 1em;
-  scroll-snap-type: x mandatory; /* 스크롤 스냅 적용 */
+  transition: transform 0.3s ease;
+  width: 100%;
 }
 
 .project-item-large {
-  flex: 0 0 48%; /* 프로젝트 항목의 너비 */
+  flex: 0 0 80%;
   display: flex;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  scroll-snap-align: center; /* 스크롤 스냅 중앙 정렬 */
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+  min-width: 100%;
+  height: 500px;
+  margin: 0 auto;
 }
 
 .project-image {
   flex: 1;
-  max-width: 50%; /* 이미지 크기 */
+  max-width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 300px;
 }
 
 .project-image img {
   width: 100%;
   height: auto;
+  
 }
 
 .project-content {
-  flex: 1;
+  flex: 2;
   padding: 1.5em;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 100px;
 }
 
 .project-content h3 {
