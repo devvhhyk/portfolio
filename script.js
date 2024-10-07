@@ -83,9 +83,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const projectItems = document.querySelectorAll(".project-item-large");
     const leftArrow = document.querySelector(".left-arrow");
     const rightArrow = document.querySelector(".right-arrow");
+    const projectCounter = document.querySelector(".project-counter");
     
     let currentIndex = 0;
     const totalProjects = projectItems.length;
+
+    // 프로젝트 카운터 함수
+    function updateCounter() {
+        projectCounter.textContent = `${currentIndex + 1} / ${totalProjects}`;
+    }
 
     // 모든 프로젝트를 숨기고 인덱스에 해당하는 프로젝트만 보이게
     function updateSlide() {
@@ -95,6 +101,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         leftArrow.style.display = currentIndex === 0 ? "none" : "block";
         rightArrow.style.display = currentIndex === totalProjects - 1 ? "none" : "block";
+
+        updateCounter();
     }
 
     rightArrow.addEventListener("click", () => {
