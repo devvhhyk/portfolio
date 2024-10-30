@@ -229,6 +229,94 @@ html {
 }
 
 
+/* Study Note Section */
+.study-note-section {
+  padding: 2em 0;
+  text-align: center;
+  background-color: #fff;
+}
+
+.study-note-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: #333;
+}
+
+.study-note-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+}
+
+.study-item {
+  width: 300px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  text-align: left;
+}
+
+.study-item:hover {
+  transform: scale(1.05);
+}
+
+.study-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.study-content {
+  padding: 1rem;
+}
+
+.study-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.study-content p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0.3rem 0;
+}
+
+.study-date {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 0.5rem;
+}
+
+.study-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.study-link:hover {
+  text-decoration: underline;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .study-note-container {
+    grid-template-columns: repeat(2, 1fr); /* 화면이 작아지면 한 줄에 2개 */
+  }
+}
+
+@media (max-width: 480px) {
+  .study-note-container {
+    grid-template-columns: 1fr; /* 모바일에서는 한 줄에 1개 */
+  }
+}
+
 
 .projects-section {
   padding: 2em 0;
@@ -238,7 +326,6 @@ html {
 
 .projects-section h2 {
   font-size: 2.5em;
-  margin-bottom: 0.5em;
   color: #333;
 }
 
@@ -299,7 +386,6 @@ html {
   overflow: hidden;
   align-items: center;
   transition: transform 0.5s ease, box-shadow 0.3s ease;
-  /* min-width: 100%; */
   height: 500px;
   margin: 0 auto;
   padding: 2em;
@@ -323,7 +409,6 @@ html {
 
 .project-content {
   flex: 2;
-  padding: 1.5em;
   text-align: left;
   display: flex;
   flex-direction: column;
