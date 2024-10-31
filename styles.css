@@ -14,8 +14,8 @@ body {
 }
 
 .header {
-  background: #1f1d1d;
-  padding: 15px;
+  background: black;
+  padding: 16px;
   position: fixed;
   width: 100%;
   top: 0;
@@ -37,14 +37,13 @@ body {
   font-weight: bold;
   text-decoration: none;
   transition: color 0.3s ease;
-  padding: 30px;
+  padding: 10px 30px 30px;
 }
 
 .nav-list {
   list-style: none;
   display: flex;
   justify-content: center;
-  padding-right: 30px;
 }
 
 .nav-list a {
@@ -257,6 +256,7 @@ html {
   overflow: hidden;
   transition: transform 0.2s ease;
   text-align: left;
+  text-decoration: none;
 }
 
 .study-item:hover {
@@ -289,19 +289,6 @@ html {
   font-size: 0.8rem;
   color: #888;
   margin-top: 0.5rem;
-}
-
-.study-link {
-  display: inline-block;
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  color: #007bff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.study-link:hover {
-  text-decoration: underline;
 }
 
 /* 반응형 디자인 */
@@ -364,11 +351,11 @@ html {
 }
 
 .left-arrow {
-  left: 10px;
+  left: 140px;
 }
 
 .right-arrow {
-  right: 10px;
+  right: 140px;
 }
 
 .projects-container {
@@ -431,8 +418,7 @@ html {
 .project-links {
   display: flex;
   justify-content: flex-start;
-  gap: 1em;
-  margin-top: 1em;
+  gap: 8px;
 }
 
 .button {
@@ -567,4 +553,36 @@ html {
 .project-item img {
   max-width: 50%;
   margin: 0 auto;
+}
+
+.bottom-right-icons {
+  position: fixed;
+  bottom: 75px;
+  right: 35px;
+  gap: 7px;
+  display: flex;
+  flex-direction: column; /* 세로 정렬 */
+  align-items: center;
+  z-index: 1000;
+}
+
+.bottom-right-icons .icon {
+  width: 50px; /* 아이콘 크기 조정 */
+  height: 50px;
+  border-radius: 50%; /* 아이콘을 동그랗게 */
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.bottom-right-icons .icon:hover {
+  transform: scale(1.1); /* 호버 시 아이콘 확대 */
+}
+
+.bottom-right-icons {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.bottom-right-icons.show {
+  opacity: 1;
 }

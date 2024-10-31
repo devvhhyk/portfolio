@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let index = 0;
     const typingText = document.getElementById('typing-text');
     const navLinks = document.querySelectorAll('.nav-list a');
+    const scrollToTopButton = document.getElementById('scroll-to-top');
+    const bottomRightIcons = document.querySelector('.bottom-right-icons');
 
     function type() {
         if (index < text.length) {
@@ -43,13 +45,15 @@ document.addEventListener('DOMContentLoaded', function() {
     navLinks.forEach(link => {
         link.addEventListener('click', scrollToSection);
     });
-  
-    const scrollToTopButton = document.getElementById('scroll-to-top');
+
+    // 스크롤 이벤트를 통해 맨 위로 버튼과 아이콘이 나타나도록 설정
     window.addEventListener('scroll', () => {
         if (window.scrollY > 300) {
             scrollToTopButton.classList.add('show');
+            bottomRightIcons.classList.add('show');
         } else {
             scrollToTopButton.classList.remove('show');
+            bottomRightIcons.classList.remove('show');
         }
     });
   
