@@ -24,9 +24,6 @@
     </nav>
   </header>
   <div class="bottom-right-icons">
-    <a href="https://velog.io/@hayu6944/posts" target="_blank">
-        <img src="img/velog_icon.png" alt="Velog Icon" class="icon">
-    </a>
     <a href="https://github.com/devvhhyk" target="_blank">
       <img src="img/git_icon.png" alt="GitHub Icon" class="icon">
   </a>
@@ -95,14 +92,6 @@
             <img src="img/jquery_icon.png" alt="jQuery">
             <p>jQuery</p>
           </div>
-          <div class="icon-container">
-            <img src="img/Bootstrap.jpeg" alt="Bootstrap">
-            <p>BootStrap</p>
-          </div>
-          <div class="icon-container">
-            <img src="img/vue_icon.png" alt="Vuejs">
-            <p>Vue.js</p>
-          </div>
         </div>
       </div>
       <div class="skill-item">
@@ -117,17 +106,18 @@
             <p>Spring</p>
           </div>
           <div class="icon-container">
+            <img src="https://avatars.githubusercontent.com/u/1492367?s=280&v=4" alt="Thymeleaf">
+            <p>Thymeleaf</p>
+          </div>
+          <div class="icon-container">
             <img src="https://godekdls.github.io/images/springboot/logo.png" alt="Spring Boot">
             <p>Spring Boot</p>
           </div>
-          <div class="icon-container">
-            <img src="img/jwt.png" alt="JWT">
-            <p>JWT</p>
-          </div>
         </div>
+
       </div>
       <div class="skill-item">
-        <h3>Database</h3>
+        <h3>Database / Cloud</h3>
         <div class="skill-icons">
           <div class="icon-container">
             <img src="img/mysql_icon.png" alt="MySQL">
@@ -137,8 +127,13 @@
             <img src="https://blog.kakaocdn.net/dn/baoi3W/btqZ4zpN2ZS/A6Hp814asNaB6byR2LFHik/img.png" alt="Oracle">
             <p>Oracle</p>
           </div>
+          <div class="icon-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/1200px-Microsoft_Azure.svg.png" alt="Azure">
+            <p>Azure</p>
+          </div>
         </div>
       </div>
+
       <div class="skill-item">
         <h3>Tools</h3>
         <div class="skill-icons">
@@ -176,6 +171,14 @@
     <h2>Study Note</h2>
     <div class="study-note-container">
 
+      <a href="https://unexpected-journey-33f.notion.site/azure-12fe8931654b80f9a7e6e678b4abd259" target="_blank" class="study-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/1200px-Microsoft_Azure.svg.png" alt="Computer Science Icon" class="study-image">
+        <div class="study-content">
+          <h3>Azure</h3>
+          <p>Azure로 배포하면서 내용과 과정을 정리해보았습니다.</p>
+        </div>
+      </a>
+
       <a href="https://unexpected-journey-33f.notion.site/CS-c70a6ad7fda549c8aa52351de6e5e488" target="_blank" class="study-item">
         <img src="img/computer.webp" alt="Computer Science Icon" class="study-image">
         <div class="study-content">
@@ -198,46 +201,33 @@
   
   <section id="projects" class="section projects-section">
     <h2>PROJECTS</h2>
+
     <div class="slider-container">
       <div class="project-counter"></div>
       <button class="arrow left-arrow">&#10094;</button>
       <div class="projects-container">
 
-        <div class="project-item-large">
-          <div class="project-image">
-            <img src="img/bookpulse.png" alt="Bookpulse">
-          </div>
-          <div class="project-content">
-            <h3>도서구매 & 도서커뮤니티 웹사이트 bookpulse (~ing)</h3>
-            <p><strong>설명:</strong> 도서를 구매하고 커뮤니티 활동을 할 수 있습니다</p>
-            <p><strong>구현한 기능:</strong> 회원가입, JWT기반 로그인/로그아웃, 로그인 여부에 따른 로그아웃/마이페이지 버튼 공개/숨김, 제목/저자/출판사로 도서검색 가능, 신작도서/베스트셀러 더보기</p>
-            <p><strong>Frontend:</strong> HTML, CSS, JavaScript</p>
-            <p><strong>Backend:</strong> Java, Thymeleaf, JPA, SpringBoot, JWT</p>
-            <p><strong>Database:</strong> MySQL</p>
-            <p><strong>Development environment:</strong> Vscode, IntelliJ</p>
-            <div class="project-links">
-              <a href="https://github.com/devvhhyk/bookpulse.git" target="_blank" class="button">깃허브로 이동</a>
-            </div>
+      <div class="project-item-large">
+        <div class="project-image">
+          <img src="img/travler.png" alt="Travler">
+        </div>
+        <div class="project-content">
+          <h3>여행 웹사이트 Traveler (4인 팀프로젝트)</h3>
+          <p><strong>설명:</strong> 여행 웹사이트로 항공, 호텔, 티켓, 패키지여행을 예약할 수 있으며 주문내역을 확인하고
+            다이어리 캘린더에서 일정을 확인할 수 있습니다</p>
+          <p><strong>구현한 기능:</strong> 호텔검색시 유효성 검사, 호텔검색, 호텔상세보기, 숙소 선택 모달, 로그인시에만 주문/결제페이지 이동,
+            관리자로 로그인 시 호텔 등록/숙소 등록, 다이어리와 캘린더에서 호텔예약 일정확인</p>
+          <p><strong>추가하고자 하는 기능:</strong> 호텔 지도 api</p>
+          <p><strong>Frontend:</strong> HTML, CSS, JavaScript</p>
+          <p><strong>Backend:</strong> Java,  Mybatis, Thymeleaf, SpringBoot</p>
+          <p><strong>Database:</strong> MySQL</p>
+          <p><strong>Development environment:</strong> IntelliJ</p>
+          <div class="project-links">
+            <a href="https://github.com/leeuihyoun/traveler" target="_blank" class="button">깃허브로 이동</a>
+            <a href="pdf/웹개발 프로젝트.pdf" target="_blank" class="button">PPT로 이동</a>
           </div>
         </div>
-
-        <div class="project-item-large">
-          <div class="project-image">
-            <img src="img/gallery.png" alt="Gallery">
-          </div>
-          <div class="project-content">
-            <h3>갤러리 웹사이트</h3>
-            <p><strong>설명:</strong> 갤러리 웹사이트 로그인을 하면 장바구니에 구매하고자 하는 항목을 넣어 그림을 구매할 수 있습니다. 뷰를 연습해보기 위해 만들어보았습니다.</p>
-            <p><strong>구현한 기능:</strong> JWT기반 로그인/로그아웃, 장바구니에 담기, 장바구니 조회, 장바구니 항목 삭제, 주문자 정보 입력/출력</p>
-            <p><strong>Frontend:</strong> Vue.js, BootStrap</p>
-            <p><strong>Backend:</strong> Java, JPA, SpringBoot, JWT</p>
-            <p><strong>Database:</strong> MySQL</p>
-            <p><strong>Development environment:</strong> Vscode, IntelliJ</p>
-            <div class="project-links">
-              <a href="https://github.com/devvhhyk/Vue.js-SpringBoot-Gallery.git" target="_blank" class="button">깃허브로 이동</a>
-            </div>
-          </div>
-        </div>
+      </div>
 
       <div class="project-item-large">
         <div class="project-image">
@@ -246,33 +236,35 @@
         <div class="project-content">
           <h3>게시판&투두리스트 Taskmanager - 회원제 게시판</h3>
           <p><strong>설명:</strong> 할일을 작성하고 완료체크가 가능하며, 게시판에 글과 사진을 저장하고 자신이 작성한 글을 수정하거나 삭제할 수 있습니다.</p>
-          <p><strong>구현한 기능:</strong> 회원가입, 로그인, 유효성검사, 아이디/이메일중복체크, 투두리스트 추가 수정 삭제 완료, 게시글 추가 수정 삭제, 게시판 페이징처리, 이미지첨부기능, 댓글 기능</p>
+          <p><strong>구현한 기능:</strong> 회원가입, 로그인, 유효성검사, 아이디/이메일중복체크, 투두리스트 추가 수정 삭제 완료, 게시글 추가 수정 삭제,
+            게시판 페이징처리, 이미지첨부기능, 댓글 기능, azure로 배포</p>
+          <p><strong>추가하고자 하는 기능:</strong> 댓글 수정, 댓글 삭제, 회원탈퇴</p>
           <p><strong>Frontend:</strong> HTML, CSS, JavaScript</p>
           <p><strong>Backend:</strong> Java, Thymeleaf, JPA, SpringBoot</p>
           <p><strong>Database:</strong> MySQL</p>
           <p><strong>Development environment:</strong> IntelliJ</p>
           <div class="project-links">
-            <a href="https://github.com/devvhhyk/taskmanager" target="_blank" class="button">깃허브로 이동</a>
+            <a href="https://github.com/devvhhyk/taskmanager-main.git" target="_blank" class="button">깃허브로 이동</a>
+            <a href="https://taskmanager-main-ekh8bbgpa3dcbvht.koreacentral-01.azurewebsites.net/" target="_blank" class="button">실행</a>
           </div>
         </div>
       </div>
 
       <div class="project-item-large">
         <div class="project-image">
-          <img src="img/travler.png" alt="Travler">
+          <img src="img/bookpulse.png" alt="Bookpulse">
         </div>
         <div class="project-content">
-          <h3>여행 웹사이트 Traveler (4인 팀프로젝트)</h3>
-          <p><strong>설명:</strong> 여행 웹사이트로 항공, 호텔, 티켓, 패키지여행을 예약할 수 있으며 주문내역을 확인하고<br>
-            다이어리 캘린더에서 일정을 확인할 수 있습니다</p>
-          <p><strong>구현한 기능:</strong> 호텔검색시 유효성 검사, 호텔검색, 호텔상세보기, 숙소 선택 모달, 로그인시에만 주문/결제페이지 이동, 관리자로 로그인 시 호텔 등록/숙소 등록</p>
+          <h3>도서 웹사이트 Bookpulse</h3>
+          <p><strong>설명:</strong> 도서목록을 확인할 수 있으며 원하는 도서를 검색하여 찾아볼 수 있습니다.</p>
+          <p><strong>구현한 기능:</strong> 회원가입, 로그인, 유효성검사, 로그인시 버튼 토글, 베스트셀러와 신작도서 더보기, 도서 검색, 도서 상세보기</p>
+          <p><strong>추가하고자 하는 기능:</strong> 장바구니 생성, 장바구니 항목 추가, 장바구니 항목 수량변경, 장바구니 항목 삭제</p>
           <p><strong>Frontend:</strong> HTML, CSS, JavaScript</p>
-          <p><strong>Backend:</strong> Java,  Mybatis, Thymeleaf, SpringBoot</p>
+          <p><strong>Backend:</strong> Java, Thymeleaf, JPA, SpringBoot</p>
           <p><strong>Database:</strong> MySQL</p>
           <p><strong>Development environment:</strong> IntelliJ</p>
           <div class="project-links">
-            <a href="https://github.com/leeuihyoun/traveler" target="_blank" class="button">깃허브로 이동</a>
-            <a href="pdf/웹개발 프로젝트.pdf" target="_blank" class="button">PPT로 이동</a>
+            <a href="https://github.com/devvhhyk/taskmanager" target="_blank" class="button">깃허브로 이동</a>
           </div>
         </div>
       </div>

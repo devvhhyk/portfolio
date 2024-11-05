@@ -328,7 +328,7 @@ html {
 .project-counter {
   position: absolute;
   bottom: 0px;
-  left: 50%;
+  left: 88%;
   transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
